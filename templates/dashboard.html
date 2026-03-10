@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Chat Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Dashboard</h1>
+        <p class="muted">Welcome, {{ user }}.</p>
+      </div>
+      <form action="/logout" method="post"><button type="submit" class="secondary">Logout</button></form>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <h2>Agentic AI Chat</h2>
+        <p class="muted">Try: <code>help</code>, <code>calc 21 * 2</code>, or ask for <code>time</code>.</p>
+        <div id="chat-log" class="chat-log"></div>
+        <form id="chat-form" class="chat-form">
+          <input id="message" autocomplete="off" placeholder="Type your message..." required />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <script src="/static/dashboard.js"></script>
+  </body>
+</html>

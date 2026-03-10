@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Chat Login</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body class="auth-body">
+    <main class="card auth-card">
+      <h1>Agentic AI Chat</h1>
+      <p class="muted">Sign in to access your dashboard.</p>
+
+      <form method="post" class="form-stack" action="/login">
+        <label>Username <input name="username" placeholder="demo" required /></label>
+        <label>Password <input type="password" name="password" placeholder="demo123" required /></label>
+        <p class="error">{{ error }}</p>
+        <button type="submit">Login</button>
+      </form>
+
+      <p class="hint">Demo credentials: <code>demo</code> / <code>demo123</code></p>
+    </main>
+  </body>
+</html>
